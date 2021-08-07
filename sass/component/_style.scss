@@ -1,0 +1,289 @@
+html {
+  font-size: 16px;
+  font-family: $font;
+}
+.blockCustom {
+  width: $widthNum;
+  background-color: khaki;
+  margin: 0 auto;
+}
+.navCustom {
+  background-color: $colorWhite !important;
+
+  margin: 0 auto;
+  &__logo {
+    width: 150px;
+    img {
+      width: 100%;
+    }
+  }
+  ul li {
+    font-family: $font;
+  }
+}
+.bgImg {
+  padding: 2rem 1rem 7rem 1rem;
+  background-repeat: no-repeat;
+  background-color: $colorBlock;
+  &__top {
+    clip-path: polygon(0 0, 100% 0%, 100% 99%, 0 58%);
+    background-size: auto 100%;
+    background-image: url("bg/bg2.jpg");
+    background-position: right 20px top 20px;
+  }
+  &__top2 {
+    clip-path: polygon(0 0, 100% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background-image: url("bg/bg4.jpg");
+    background-size: cover;
+    background-position: 0 -20px;
+  }
+  &__bottom {
+    position: relative;
+    clip-path: polygon(50% 0, 100% 30%, 100% 100%, 0 100%, 0 30%);
+    padding-bottom: 5rem;
+  }
+  &__bottom::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-image: url("bg/bg5.jpg");
+    background-size: cover;
+    background-position: 0 -500px;
+  }
+}
+
+.sectionMiddle {
+  background-color: $color_3;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  &__img {
+    width: 100%;
+    img {
+      width: inherit;
+    }
+  }
+}
+.mainCustom {
+  .jumbotron {
+    text-align: center;
+    &__title {
+      color: $colorWhite;
+      padding: 5px 10px 15px 10px;
+      border-bottom: 3px solid $color_1;
+      line-height: 1.6;
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 600;
+      font-family: $font;
+    }
+  }
+}
+.bgBlock {
+  width: 200px;
+  height: 260px;
+  background-color: $color_2;
+  position: relative;
+  margin: 0 auto;
+  &__round {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.content {
+  //padding-top: 50px;
+  &__title {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid $color_1;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-family: $font;
+  }
+  &__info {
+    line-height: 1.7;
+  }
+}
+.sectionForm {
+  &__title {
+    font-weight: 500;
+    font-family: $font;
+    font-size: 1.5rem;
+    border-bottom: 2px solid $color_1;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
+  }
+  .container {
+    .row {
+      &:first-child {
+        .col-sm-12.col-md-4:nth-child(odd) {
+          background-color: $color_4;
+        }
+      }
+      &:last-child {
+        .col-sm-12.col-md-4:nth-child(even) {
+          background-color: $color_4;
+        }
+      }
+      .custom-control-input:checked ~ .custom-control-label::before {
+        border-color: $color_3;
+        background-color: $color_3;
+      }
+      .custom-control-input:focus ~ .custom-control-label::before {
+        box-shadow: 0 0 0 0.2rem rgba(98, 98, 99, 0.384);
+      }
+
+      .custom-control-label {
+        font-family: $font;
+        font-weight: 300;
+        &::before {
+          border: 1px solid rgba($color_3, 0.5);
+        }
+      }
+
+      .custom-control-input:not(:disabled):active
+        ~ .custom-control-label::before {
+        background-color: $color_3;
+        border-color: $color_3;
+      }
+
+      .col-sm-12.col-md-4 {
+        margin-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 8px;
+        .custom-control {
+          min-height: 1.7rem;
+        }
+      }
+    }
+  }
+}
+.submitBtn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  font-family: $font;
+  border-radius: 25px;
+  background-color: $color_1;
+  border-color: $color_1;
+  margin: 30px 0;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $color_5 !important;
+    border-color: $color_5 !important;
+    box-shadow: 0 0 0 0.2rem $color_4 !important;
+  }
+}
+.sectionResults {
+  &__info {
+    h5 {
+      margin-bottom: 20px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    p {
+      font-family: $font;
+      font-weight: 300;
+    }
+  }
+}
+footer {
+  background-color: $color_3;
+  div {
+    color: $colorWhite;
+    font-size: 0.9rem;
+  }
+}
+.pie {
+  width: $pieWidth;
+  height: $pieWidth;
+  border-radius: 50%;
+  background: $color_Round;
+  background-image: linear-gradient(to right, transparent 50%, $color_Round2 0);
+  overflow: hidden;
+  position: relative;
+  margin: 20px auto;
+
+  &::before {
+    content: "";
+    display: block;
+    margin-left: 50%;
+    height: 100%;
+    border-radius: 0 100% 100% 0 / 50%;
+    background-color: inherit;
+    transform-origin: left;
+    // animation: spin 3s linear infinite, bg 6s step-end infinite;
+  }
+  &#js-Neuroticism::before {
+    background-color: inherit;
+    transform: rotate(90deg);
+  }
+  &#js-Emotional::before {
+    background-color: inherit;
+    transform: rotate(180deg);
+  }
+  &#js-Negative::before {
+    background-color: $color_Round2;
+    transform: rotate(90deg);
+  }
+
+  &#js-Indifferent::before {
+    background-color: $color_Round2;
+    transform: rotate(180deg);
+  }
+  &__num,
+  &__numInfo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__num {
+    width: calc(#{$pieWidth} - #{$pieWidthSmall});
+    height: calc(#{$pieWidth} - #{$pieWidthSmall});
+    background-color: $colorWhite;
+    border-radius: 50%;
+  }
+  &__numInfo {
+    font-size: 2rem;
+    font-family: $font;
+    font-weight: 300;
+    span {
+      font-size: 1.2rem;
+      margin-left: 5px;
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+@keyframes bg {
+  50% {
+    background: #655;
+  }
+}

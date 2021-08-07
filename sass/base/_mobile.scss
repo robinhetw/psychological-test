@@ -1,0 +1,59 @@
+/* 平板  */
+@media only screen and (min-width: 1024px) {
+  .bgImg__top2 {
+    background-position: 0 -200px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .bgImg__bottom::before {
+    background-position: 0 -200px;
+  }
+}
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+}
+
+@media only screen and (max-width: 768px) {
+  .mainCustom .jumbotron__title {
+    background-color: rgba(0, 0, 0, 0.596);
+    border-bottom: none;
+  }
+  .bgImg__bottom::before {
+    background-position: 0 -120px;
+  }
+}
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+}
+
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+}
+
+/* 手機 mobile  */
+// 首頁
+@media only screen and (max-width: 576px) {
+  .navCustom,
+  .blockCustom {
+    width: 100%;
+  }
+  .bgBlock__round {
+    left: 30px;
+  }
+  .mainCustom .jumbotron__title {
+    font-size: 2.3rem;
+  }
+
+  .bgImg__bottom::before {
+    background-position: 0px;
+  }
+}
+
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+}
+@media only screen and (max-width: 375px) {
+  .bgImg__top2 {
+    background-position: 0px;
+  }
+  .bgImg__bottom::before {
+    background-position: -140px 0px;
+  }
+}
