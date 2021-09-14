@@ -126,7 +126,8 @@ html {
 
 .sectionForm .container .row .custom-control-label {
   font-family: "Noto Sans TC", sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  cursor: pointer; }
   .sectionForm .container .row .custom-control-label::before {
     border: 1px solid rgba(3, 4, 6, 0.5); }
 
@@ -143,17 +144,28 @@ html {
   .sectionForm .container .row .col-sm-12.col-md-4 .custom-control {
     min-height: 1.7rem; }
 
-.submitBtn {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+.submitBtn,
+.resetBtn {
   padding: 10px 30px;
   font-family: "Noto Sans TC", sans-serif;
   border-radius: 25px;
+  font-weight: 300;
+  margin: 0 10px; }
+
+.resetBtn:hover {
+  background-color: #9d9ea0 !important;
+  border-color: #9d9ea0 !important;
+  box-shadow: 0 0 0 0.2rem rgba(223, 222, 211, 0.192) !important; }
+
+.resetBtn:focus {
+  outline: none;
+  box-shadow: none !important; }
+
+.submitBtn {
   background-color: #9d9ea0;
   border-color: #9d9ea0;
   margin: 30px 0; }
-  .submitBtn:hover, .submitBtn:active, .submitBtn:focus {
+  .submitBtn:hover {
     background-color: #5e5e5e !important;
     border-color: #5e5e5e !important;
     box-shadow: 0 0 0 0.2rem rgba(223, 222, 211, 0.192) !important; }
