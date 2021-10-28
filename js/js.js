@@ -70,9 +70,62 @@ const indifferent = [
 function myFunction() {
   var array = [];
   var checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
-  console.log(checkboxes.dataset.answer);
+  //console.log(checkboxes);
   for (var i = 0; i < checkboxes.length; i++) {
-    array.push(checkboxes[i].value);
+    array.push(checkboxes[i].dataset.answer);
   }
-  console.log(array);
+  // console.log("my selected" + array);
+
+  // 比較出差異
+  function arrayCompare(val) {
+    return array.indexOf(val) != -1;
+  }
+
+  let newEmotional = emotional.filter(arrayCompare);
+  let newNeuroticism = neuroticism.filter(arrayCompare);
+  let newNegative = negative.filter(arrayCompare);
+  let newIndifferent = indifferent.filter(arrayCompare);
+
+  // console.log("newEmotional " + newEmotional);
+  // console.log("newNeuroticism " + newNeuroticism);
+  // console.log("newNegative " + newNegative);
+  // console.log("newIndifferent " + newIndifferent);
+
+  // 百分比
+  function Percentage(num, total) {
+    if (isNaN(num) || isNaN(total)) {
+      return "-";
+    }
+    return total <= 0 ? "0%" : Math.round(((num / total) * 10000) / 100);
+  }
+
+  newEmotional = Percentage(newEmotional.length, 14);
+  newNeuroticism = Percentage(newNeuroticism.length, 14);
+  newNegative = Percentage(newNegative.length, 14);
+  newIndifferent = Percentage(newIndifferent.length, 14);
+
+  console.log("newEmotional %" + newEmotional);
+  console.log("newNeuroticism %" + newNeuroticism);
+  console.log("newNegative %" + newNegative);
+  console.log("newIndifferent %" + newIndifferent);
+
+  // 圓比例
+  function RoundPercentage(num) {
+    let total;
+    total = Math.round((num * 360) / 100);
+    // if (total > 180) {
+    //   total = total - 180;
+    //   console.log(num + "角度大於180" + total);
+    // }
+    return total;
+  }
+  let RoundNewEmotional = RoundPercentage(newEmotional);
+  let RoundNewNeuroticism = RoundPercentage(newNeuroticism);
+  let RoundNewNegative = RoundPercentage(newNegative);
+  let RoundNewIndifferent = RoundPercentage(newIndifferent);
+
+  console.log("newEmotionalRound 圓比例" + RoundNewEmotional);
+  console.log("newNeuroticism  圓比例" + RoundNewNeuroticism);
+  console.log("newNegative  圓比例" + RoundNewNegative);
+  console.log("newIndifferent  圓比例" + RoundNewIndifferent);
 }
