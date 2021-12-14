@@ -23,7 +23,7 @@
 
 <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light navCustom container">
-        <a class="navbar-brand navCustom__logo" href="#"><img src="img/logo.png" alt="logo"></a>
+        <a class="navbar-brand navCustom__logo" href="index.html"><img src="img/logo.png" alt="logo"></a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
             aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">首頁</a>
+                    <a class="nav-link" href="index.html">首頁</a>
                 </li>
 
             </ul>
@@ -49,7 +49,7 @@
                         <div class="sectionResults__num">
                             <div class="pie" id="js-Neuroticism">
                                 <div class="pie__num">
-                                    <div class="pie__numInfo">25<span>%</span></div>
+                                    <div class="pie__numInfo" id="neuroticism">0<span>%</span></div>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                         <div class="sectionResults__num">
                             <div class="pie" id="js-Negative">
                                 <div class="pie__num">
-                                    <div class="pie__numInfo">75<span>%</span></div>
+                                    <div class="pie__numInfo" id="negative">0<span>%</span></div>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                         <div class="sectionResults__num">
                             <div class="pie" id="js-Emotional">
                                 <div class="pie__num">
-                                    <div class="pie__numInfo">50<span>%</span></div>
+                                    <div class="pie__numInfo" id="emotional">0<span>%</span></div>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                         <div class="sectionResults__num">
                             <div class="pie" id="js-Indifferent">
                                 <div class="pie__num">
-                                    <div class="pie__numInfo">100<span>%</span></div>
+                                    <div class="pie__numInfo" id="indifferent">0<span>%</span></div>
                                 </div>
                             </div>
                         </div>
@@ -167,6 +167,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="js/js.js"></script>
 </body>
 
 </html>
