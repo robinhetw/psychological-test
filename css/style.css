@@ -187,42 +187,19 @@ footer {
     font-size: 0.9rem; }
 
 .pie {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background: #eadfdf;
-  background-image: linear-gradient(to right, transparent 50%, #c4c4c4 0);
-  overflow: hidden;
+  width: 100px;
+  height: 100px;
   position: relative;
-  margin: 20px auto; }
-  .pie::before {
-    content: "";
-    display: block;
-    margin-left: 50%;
-    height: 100%;
-    border-radius: 0 100% 100% 0 / 50%;
-    background-color: inherit;
-    transform-origin: left; }
-  .pie#js-Neuroticism::before {
-    background-color: inherit;
-    transform: rotate(90deg); }
-  .pie#js-Emotional::before {
-    background-color: inherit;
-    transform: rotate(180deg); }
-  .pie#js-Negative::before {
-    background-color: #c4c4c4;
-    transform: rotate(90deg); }
-  .pie#js-Indifferent::before {
-    background-color: #c4c4c4;
-    transform: rotate(180deg); }
+  margin: 10px auto;
+  z-index: 0; }
   .pie__num, .pie__numInfo {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); }
   .pie__num {
-    width: calc(130px - 30px);
-    height: calc(130px - 30px);
+    width: calc(100px - 0px);
+    height: calc(100px - 0px);
     background-color: #fff;
     border-radius: 50%; }
   .pie__numInfo {
@@ -232,6 +209,10 @@ footer {
     .pie__numInfo span {
       font-size: 1.2rem;
       margin-left: 5px; }
+
+.chartStyle {
+  width: 100%;
+  height: 500px; }
 
 @keyframes spin {
   to {
