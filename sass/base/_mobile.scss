@@ -7,7 +7,7 @@
 
 @media only screen and (max-width: 1024px) {
   .bgImg__bottom::before {
-    background-position: 0 -200px;
+    // background-position: 0 -200px;
   }
 }
 @media only screen and (max-width: 1024px) and (orientation: landscape) {
@@ -18,8 +18,11 @@
     background-color: rgba(0, 0, 0, 0.596);
     border-bottom: none;
   }
+  .bgImg__bottom {
+    padding-bottom: 1rem;
+  }
   .bgImg__bottom::before {
-    background-position: 0 -120px;
+    // background-position: 0 -120px;
   }
 }
 @media only screen and (max-width: 736px) and (orientation: landscape) {
@@ -41,7 +44,9 @@
   .mainCustom .jumbotron__title {
     font-size: 2.3rem;
   }
-
+  .bgImg__bottom {
+    padding-bottom: 0rem;
+  }
   .bgImg__bottom::before {
     background-position: 0px;
   }

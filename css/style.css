@@ -162,8 +162,8 @@ html {
   box-shadow: none !important; }
 
 .submitBtn {
-  background-color: #9d9ea0;
-  border-color: #9d9ea0;
+  background-color: #030406;
+  border-color: #030406;
   margin: 30px 0; }
   .submitBtn:hover {
     background-color: #5e5e5e !important;
@@ -222,21 +222,67 @@ footer {
   50% {
     background: #655; } }
 
+.styleChart {
+  width: 60%;
+  height: 100%;
+  margin: 15px auto; }
+
+#background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.98);
+  z-index: 9999; }
+
+.lds-facebook {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  transform: translate(44%, 45%); }
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite; }
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s; }
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s; }
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0; }
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px; }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px; } }
+
 /* 平板  */
 @media only screen and (min-width: 1024px) {
   .bgImg__top2 {
-    background-position: 0 -200px; } }
-
-@media only screen and (max-width: 1024px) {
-  .bgImg__bottom::before {
     background-position: 0 -200px; } }
 
 @media only screen and (max-width: 768px) {
   .mainCustom .jumbotron__title {
     background-color: rgba(0, 0, 0, 0.596);
     border-bottom: none; }
-  .bgImg__bottom::before {
-    background-position: 0 -120px; } }
+  .bgImg__bottom {
+    padding-bottom: 1rem; } }
 
 /* 手機 mobile  */
 @media only screen and (max-width: 576px) {
@@ -247,6 +293,8 @@ footer {
     left: 30px; }
   .mainCustom .jumbotron__title {
     font-size: 2.3rem; }
+  .bgImg__bottom {
+    padding-bottom: 0rem; }
   .bgImg__bottom::before {
     background-position: 0px; } }
 

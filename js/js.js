@@ -70,11 +70,11 @@ const indifferent = [
 function myFunction() {
   var array = [];
   var checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
-  //console.log(checkboxes);
+
   for (var i = 0; i < checkboxes.length; i++) {
     array.push(checkboxes[i].dataset.answer);
   }
-  //console.log("my selected" + array);
+  // console.log("my selected" + array);
 
   // 比較出差異
   function arrayCompare(val) {
@@ -113,21 +113,13 @@ function myFunction() {
   function RoundPercentage(num) {
     let total;
     total = Math.round((num * 360) / 100);
-    // if (total > 180) {
-    //   total = total - 180;
-    //   console.log(num + " 角度大於180 " + total);
-    // }
+
     return total;
   }
   let RoundNewEmotional = RoundPercentage(newEmotional);
   let RoundNewNeuroticism = RoundPercentage(newNeuroticism);
   let RoundNewNegative = RoundPercentage(newNegative);
   let RoundNewIndifferent = RoundPercentage(newIndifferent);
-
-  // console.log("newEmotionalRound 圓比例" + RoundNewEmotional);
-  // console.log("newNeuroticism  圓比例" + RoundNewNeuroticism);
-  // console.log("newNegative  圓比例" + RoundNewNegative);
-  // console.log("newIndifferent  圓比例" + RoundNewIndifferent);
 
   // localStorage 比例與角度
   localStorage.setItem("newEmotional", newEmotional);
@@ -142,76 +134,3 @@ function myFunction() {
 
   window.open("results.html", "_self");
 }
-
-window.onload = function () {
-  // function rotationAngle(num) {
-  //   if (num > 180) {
-  //     num = num - 180;
-  //     this.insertRule(".pie::before{content:'我是修改的 content ';}", 0);
-  //   }
-  //   return num;
-  // }
-
-  let answerEmotional = localStorage.getItem("newEmotional");
-  let answerNeuroticism = localStorage.getItem("newNeuroticism");
-  let answerNegative = localStorage.getItem("newNegative");
-  let answerIndifferent = localStorage.getItem("newIndifferent");
-
-  // let answerRoundEmotional = localStorage.getItem("RoundNewEmotional");
-  // let answerRoundNeuroticism = localStorage.getItem("RoundNewNeuroticism");
-  // let answerRoundNegative = localStorage.getItem("RoundNewNegative");
-  // let answerRoundIndifferent = localStorage.getItem("RoundNewIndifferent");
-
-  let answerRoundEmotional = localStorage.getItem("RoundNewEmotional");
-  let answerRoundNeuroticism = localStorage.getItem("RoundNewNeuroticism");
-  let answerRoundNegative = localStorage.getItem("RoundNewNegative");
-  let answerRoundIndifferent = localStorage.getItem("RoundNewIndifferent");
-
-  // console.log(answerEmotional);
-  // console.log(answerNeuroticism);
-  // console.log(answerNegative);
-  // console.log(answerIndifferent);
-
-  console.log(answerRoundEmotional);
-  console.log(answerRoundNeuroticism);
-  console.log(answerRoundNegative);
-  console.log(answerRoundIndifferent);
-
-  $("#neuroticism").html(answerNeuroticism + "<span>%</span>");
-  $("#negative").html(answerNegative + "<span>%</span>");
-  $("#emotional").html(answerEmotional + "<span>%</span>");
-  $("#indifferent").html(answerIndifferent + "<span>%</span>");
-
-  var ctx = document.getElementById("chart").getContext("2d");
-
-  var chart = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: ["神經質父母", "消極型父母", "情緒化父母", "冷漠型父母"],
-      datasets: [
-        {
-          label: "# 百分比",
-          data: [
-            answerNeuroticism,
-            answerNegative,
-            answerEmotional,
-            answerIndifferent,
-          ],
-          backgroundColor: [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-          ],
-          borderColor: [
-            "rgba(255,99,132,1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-          ],
-          borderWidth: 1,
-        },
-      ],
-    },
-  });
-};
